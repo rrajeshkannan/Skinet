@@ -8,7 +8,11 @@ namespace Core.Specifications
 {
     public abstract class BaseSpecification<TEntity> : ISpecification<TEntity>
     {
-        public BaseSpecification(Expression<Func<TEntity, bool>> criteria)
+        protected BaseSpecification()
+        {
+        }
+
+        protected BaseSpecification(Expression<Func<TEntity, bool>> criteria)
         {
             Criteria = criteria;
         }
