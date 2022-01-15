@@ -8,9 +8,7 @@ using AutoMapper;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProductsController : ControllerBase
+    public class ProductsController : BaseApiController
     {
         private readonly IEntityRepository<Product> _productsRepo;
         private readonly IEntityRepository<ProductBrand> _productBrandsRepo;
